@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DOTFILES=$HOME/.dotfiles
+DOTFILES=$HOME/.dotfiles-shell
 
 echo -e "Creating symlink"
 linkables=$( find -H "$DOTFILES" -maxdepth 1 -name '.*' -not -name '.git*')
