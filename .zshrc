@@ -18,13 +18,19 @@ if [ -n "${commands[fzf-share]}" ]; then
 	source "$(fzf-share)/completion.zsh"
 fi
 
+if [[ "$OSTYPE" == darwin* ]]; then
+  # $(brew --prefix)/opt/fzf/install
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fi
+
 source "${HOME}/.z_lib/z/z.sh"
 
 # Aliases
 alias ...='cd ../..'
 alias sortmirror='sudo reflector --latest 200 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias ls='exa'
-alias l='ls -lg'
+alias ll='exa -ahl --git'
+alias l='ll'
 alias la='ls -ga'
 alias lla='ls -lga'
 alias lt='ls --tree'
