@@ -29,7 +29,7 @@ source "${HOME}/.z_lib/z/z.sh"
 alias ...='cd ../..'
 alias sortmirror='sudo reflector --latest 200 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias ls='exa'
-alias ll='exa -ahl --git'
+alias ll='exa -aghl --git'
 alias l='ll'
 alias la='ls -ga'
 alias lla='ls -lga'
