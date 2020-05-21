@@ -25,6 +25,11 @@ fi
 
 source "${HOME}/.z_lib/z/z.sh"
 
+
+if [[ -s "${ZDOTDIR:-$HOME}/.zcustom" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zcustom"
+fi
+
 # Aliases
 alias ...='cd ../..'
 alias sortmirror='sudo reflector --latest 200 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'

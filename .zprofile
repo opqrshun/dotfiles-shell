@@ -17,10 +17,6 @@ fi
 # Editors
 #
 
-if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zcustom" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zcustom"
-fi
-
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PAGER='less'
