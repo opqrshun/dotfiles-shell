@@ -30,6 +30,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zcustom" ]]; then
   source "${ZDOTDIR:-$HOME}/.zcustom"
 fi
 
+if [[ -n ${TMUX} && -n ${commands[tmux]} ]];then
+  TERM=screen-256color
+fi
 # Aliases
 alias ...='cd ../..'
 alias sortmirror='sudo reflector --latest 200 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
