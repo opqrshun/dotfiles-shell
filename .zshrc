@@ -30,6 +30,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zcustom" ]]; then
   source "${ZDOTDIR:-$HOME}/.zcustom"
 fi
 
+if [[ -s "${ZDOTDIR:-$HOME}/.zspecial" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zspecial"
+fi
+
 if [[ -n ${TMUX} && -n ${commands[tmux]} ]];then
   TERM=screen-256color
 fi
