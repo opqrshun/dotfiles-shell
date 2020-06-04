@@ -51,10 +51,18 @@ alias rm='rm -i'
 alias f='ranger'
 alias c='cmus'
 alias h='htop'
-alias vim='vim -u NONE -N'
+alias vim='nvim'
 alias v='nvim'
 alias cat='bat'
 alias relogin='exec $SHELL -l'
+
+# git
+alias pr="hub pull-request -p"
+alias g.="git checkout ."
+alias gbranch="git branch --sort authordate"
+
+alias lzg="lazygit"
+alias lzd="lazydocker"
 # Show OS info when opening a new terminal
 neofetch
 
