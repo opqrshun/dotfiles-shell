@@ -57,8 +57,9 @@ alias cat='bat'
 alias relogin='exec $SHELL -l'
 
 # git
-alias pr="hub pull-request -p"
+alias gpr="hub pull-request -p"
 alias g.="git checkout ."
+alias gpush="git push --set-upstream origin"
 alias gbranch="git branch --sort authordate"
 
 alias lzg="lazygit"
