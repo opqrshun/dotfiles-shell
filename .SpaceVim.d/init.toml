@@ -32,7 +32,14 @@
 # name = "tpope/vim-surround"
 # merged = false
 
+[[custom_plugins]]
+name = "peitalin/vim-jsx-typescript"
+merged = false
    
+[[custom_plugins]]
+name = "mxw/vim-jsx"
+merged = false
+
 [[custom_plugins]]
 name = "tpope/vim-commentary"
 merged = false
