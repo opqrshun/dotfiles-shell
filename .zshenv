@@ -20,4 +20,6 @@ export PATH=$HOME/.local/bin:$PATH
 # Go
 export PATH="$PATH:$HOME/go/bin"
 
-
+#n
+export N_PREFIX="$HOME/n"
+export PATH="$HOME/n/bin:$PATH"
