@@ -24,6 +24,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
 fi
 
 source "${HOME}/.z_lib/z/z.sh"
+eval $(thefuck --alias)
 
 
 if [[ -s "${ZDOTDIR:-$HOME}/.zcustom" ]]; then
@@ -59,11 +60,14 @@ alias relogin='exec $SHELL -l'
 # git
 alias gpr="hub pull-request -p"
 alias g.="git checkout ."
-alias gpush="git push --set-upstream origin"
+alias git-rpush="git push --set-upstream origin"
 alias gbranch="git branch --sort authordate"
 
 alias lzg="lazygit"
 alias lzd="lazydocker"
+alias re="fuck"
 # Show OS info when opening a new terminal
 neofetch
 
+
+source /home/taki/.config/broot/launcher/bash/br
