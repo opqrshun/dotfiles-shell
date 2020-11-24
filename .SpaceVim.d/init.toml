@@ -69,8 +69,8 @@ default_height = 30
   name = "lang#debug"
 
 # language layers
-[[layers]]
-  name = "lang#go"
+# [[layers]]
+#   name = "lang#go"
 
 [[layers]]
   name = "lang#rust"
