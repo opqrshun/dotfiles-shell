@@ -87,6 +87,9 @@ name = "lang#php"
 [[layers]]
   name = "lang#haskell"
 
+# [[layers]]
+#   name = "lang#typescript"
+
 [[layers]]
   name = "lang#swift"
 

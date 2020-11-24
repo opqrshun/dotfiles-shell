@@ -20,6 +20,13 @@ export PATH=$HOME/.local/bin:$PATH
 # Go
 export PATH="$PATH:$HOME/go/bin"
 
+# Rust
+export PATH="$PATH:$HOME/.cargo/bin"
+
 #n
 export N_PREFIX="$HOME/n"
 export PATH="$HOME/n/bin:$PATH"
+
+# USP 
+export PATH="$PATH:$HOME/.usp/bin"
+
