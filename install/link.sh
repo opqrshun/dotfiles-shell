@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-DOTFILES=$HOME/.dotfiles-shell
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES="${DOTFILES:-$(cd -- "$SCRIPT_DIR/.." && pwd)}"
 
 echo -e "Creating symlink"
 linkables=$( find -H "$DOTFILES" -maxdepth 1 -name '.*' -not -name '.git*')
