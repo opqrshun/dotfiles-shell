@@ -61,8 +61,6 @@ else
 fi
 alias ip='ip -c'
 alias rm='rm -i'
-alias f='ranger'
-alias c='cmus'
 alias h='htop'
 alias vim='nvim'
 alias v='nvim'
