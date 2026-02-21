@@ -20,7 +20,7 @@ backup_existing_target() {
 }
 
 echo -e "Creating symlink"
-linkables=$( find -H "$DOTFILES" -maxdepth 1 -name '.*' -not -name '.git*' -not -name '.config' -not -name '.kiro')
+linkables=$( find -H "$DOTFILES" -mindepth 1 -maxdepth 1 -name '.*' -not -name '.git*' -not -name '.config' -not -name '.kiro')
 for file in $linkables ; do
     target="$HOME/$( basename "$file")"
     if [ -L "$target" ]; then
