@@ -26,7 +26,7 @@ export PATH="$PATH:$HOME/.cargo/bin"
 #n
 export N_PREFIX="$HOME/n"
 export PATH="$HOME/n/bin:$PATH"
+export PATH="$HOME/.config/n/bin:$PATH"
 
 # USP 
 export PATH="$PATH:$HOME/.usp/bin"
-

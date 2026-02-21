@@ -23,8 +23,12 @@ if [[ "$OSTYPE" == darwin* ]]; then
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 fi
 
-source "${HOME}/.z_lib/z/z.sh"
-eval $(thefuck --alias)
+if [[ -f "${HOME}/.z_lib/z/z.sh" ]]; then
+  source "${HOME}/.z_lib/z/z.sh"
+fi
+if command -v thefuck >/dev/null 2>&1; then
+  eval "$(thefuck --alias)"
+fi
 
 
 if [[ -s "${ZDOTDIR:-$HOME}/.zcustom" ]]; then
@@ -41,12 +45,20 @@ fi
 # Aliases
 alias ...='cd ../..'
 alias sortmirror='sudo reflector --latest 200 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
-alias ls='exa'
-alias ll='ls -ghl --git'
-alias l='ll'
-alias la='ls -ga'
-alias lla='ls -aghl --git'
-alias lt='ls --tree'
+if command -v eza >/dev/null 2>&1; then
+  alias ls='eza'
+  alias ll='ls -ghl --git'
+  alias l='ll'
+  alias la='ls -ga'
+  alias lla='ls -aghl --git'
+  alias lt='ls --tree'
+else
+  alias ll='ls -lah'
+  alias l='ll'
+  alias la='ls -A'
+  alias lla='ls -lahA'
+  alias lt='ls'
+fi
 alias ip='ip -c'
 alias rm='rm -i'
 alias f='ranger'
@@ -63,11 +75,20 @@ alias g.="git checkout ."
 alias git-rpush="git push --set-upstream origin"
 alias gbranch="git branch --sort authordate"
 
-alias lzg="lazygit"
-alias lzd="lazydocker"
+if command -v lazygit >/dev/null 2>&1; then
+  alias lzg="lazygit"
+fi
+if command -v lazydocker >/dev/null 2>&1; then
+  alias lzd="lazydocker"
+fi
 alias re="fuck"
 # Show OS info when opening a new terminal
-neofetch
+if command -v neofetch >/dev/null 2>&1; then
+  neofetch
+elif command -v fastfetch >/dev/null 2>&1; then
+  fastfetch
+fi
 
-
-source /home/taki/.config/broot/launcher/bash/br
+if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/broot/launcher/bash/br" ]; then
+  source "${XDG_CONFIG_HOME:-$HOME/.config}/broot/launcher/bash/br"
+fi
