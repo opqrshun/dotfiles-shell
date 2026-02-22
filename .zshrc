@@ -81,10 +81,8 @@ if command -v lazydocker >/dev/null 2>&1; then
 fi
 alias re="fuck"
 # Show OS info when opening a new terminal
-if command -v neofetch >/dev/null 2>&1; then
-  neofetch
-elif command -v fastfetch >/dev/null 2>&1; then
-  fastfetch
+if command -v macchina >/dev/null 2>&1; then
+  macchina
 fi
 
 if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/broot/launcher/bash/br" ]; then
